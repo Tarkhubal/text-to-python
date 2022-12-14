@@ -14,4 +14,6 @@
 
 Simple :
 
-All commands starts with a `!` (example : !afficher), to create a variable, put it name and follow it by a `/` and write what you want to put inside next (warning: to prevent bugs, write variables names without spaces and special caracteres)
+All commands starts with a `!` (example : !afficher) (but not the variables)
+
+To create a variable, put it name within `/` and write what you want to put inside next (warning: to prevent bugs, write variables names without spaces and special caracteres (like `!`, `?`, `/`, `\`, `(`, `)`, `;`, `:`, `.`, ect) (example : `/variable/`))

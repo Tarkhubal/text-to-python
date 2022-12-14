@@ -1,7 +1,8 @@
-variable/Vive les pommes
-variable2/Vive les poires
+/variable/Vive les pommes
+/variable2/Vive les poires
 
 !afficher variable2
+!afficher variable
 
-!si variable1 est egale a variable2 alors
+!si variable est egale a variable2 alors
     !afficher Chinois
