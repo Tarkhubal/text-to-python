@@ -1,8 +1,13 @@
-/variable/Vive les pommes
-/variable2/Vive les poires
+/variable/^^236
+/variable2/^^236
+/variable3/Poire test
 
 !afficher variable2
 !afficher variable
 
 !si variable est egale a variable2 alors
     !afficher Chinois
+    !si variable est egale a variable3 alors
+        !afficher variable2
+
+!afficher variable3

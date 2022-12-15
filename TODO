@@ -1,0 +1,7 @@
+bug avec commandes dans les boucles if, en cas de double tab, même si le premier test est False, exécute quand même le deuxième
+==> A tester :
+créer une variable "if_tested" ? (string: "test_True" / "test_False" | bool: None)
+si tab ou 4xespaces alors chercher si if_tested == "test_True", sinon si if_tested = None alors line pass
+
+
+bug après une exécution suite à un test : \n avant la ligne suivante
