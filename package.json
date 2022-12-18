@@ -1,0 +1,14 @@
+{
+    "name": "text-to-python",
+    "version": "0.0.5",
+    "private": false,
+    "scripts": {
+      "start": "python main.py",
+      "dev": "python tests/main.py"
+    },
+    "dependencies": {
+      "python": "^9.0.0"
+    },
+    "license": "Private - Reproduction Prohibited",
+    "repo": "https://github.com/Tarkhubal/text-to-python"
+}

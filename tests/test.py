@@ -1,4 +1,4 @@
-file = open("./past-your-script-here.txt", "r")
+file = open("./tests/past-your-script-here.txt", "r")
 lines_lst = file.readlines()
 
 vars_lst = []
