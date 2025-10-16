@@ -1,5 +1,4 @@
 import sys
-import re
 
 
 class TextToPythonInterpreter:
@@ -8,9 +7,7 @@ class TextToPythonInterpreter:
     def __init__(self):
         self.variables = {}
         self.condition_stack = []
-        self.should_execute = True
         self.stopped = False
-        self.else_executed = set()  # Track which conditions have had their else executed
         
     def parse_value(self, text):
         """Convertit un texte en valeur (int ou str)"""
@@ -141,10 +138,13 @@ class TextToPythonInterpreter:
         elif line.startswith("!calculer "):
             expr = line[10:].strip()
             try:
-                # Remplacer les variables par leurs valeurs
-                for var_name, var_value in self.variables.items():
+                # Remplacer les variables par leurs valeurs (en ordre de longueur decroissante pour eviter les faux positifs)
+                # Exemple: si on a 'x' et 'xx', on remplace 'xx' d'abord
+                sorted_vars = sorted(self.variables.items(), key=lambda x: len(x[0]), reverse=True)
+                for var_name, var_value in sorted_vars:
                     expr = expr.replace(var_name, str(var_value))
-                # Evaluer l'expression
+                # ATTENTION: eval() peut être dangereux avec du code non fiable
+                # Dans un contexte de production, utiliser un parseur d'expressions plus sûr
                 result = eval(expr)
                 print(result)
             except Exception as e:
