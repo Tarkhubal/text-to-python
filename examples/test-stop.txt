@@ -1,0 +1,11 @@
+/compteur/^^0
+
+!afficher Debut du programme
+!afficher compteur
+
+!si compteur est egale a ^^0 alors
+__!afficher Condition vraie, arret du programme
+__!stop
+
+!afficher Ceci ne sera jamais affiche
+!afficher compteur
