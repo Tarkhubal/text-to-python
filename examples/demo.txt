@@ -1,0 +1,50 @@
+/nom/Alice
+/age/^^25
+/score/^^100
+
+!afficher === Test des variables ===
+!afficher nom
+!afficher age
+!afficher score
+
+!afficher 
+!afficher === Test des conditions ===
+
+!si age est superieur a ^^18 alors
+__!afficher Alice est majeure
+
+!si score est egale a ^^100 alors
+__!afficher Score parfait !
+
+!afficher 
+!afficher === Test de !sinon (else) ===
+
+!si age est inferieur a ^^18 alors
+__!afficher Mineur
+!sinon
+__!afficher Majeur
+
+/test/^^50
+
+!si test est superieur a ^^100 alors
+__!afficher test est grand
+!sinon
+__!afficher test est petit ou moyen
+
+!afficher 
+!afficher === Test des conditions imbriquees ===
+
+!si age est superieur a ^^20 alors
+__!si score est egale a ^^100 alors
+____!afficher Jeune et excellent !
+
+!si age est inferieur a ^^30 alors
+__!si age est superieur a ^^20 alors
+____!afficher Entre 20 et 30 ans
+__!sinon
+____!afficher Moins de 20 ans
+!sinon
+__!afficher Plus de 30 ans
+
+!afficher 
+!afficher === Fin des tests ===
